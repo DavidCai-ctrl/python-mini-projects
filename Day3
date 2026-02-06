@@ -1,0 +1,18 @@
+import random
+num_guess = 1
+#Track guesses
+number = random.randint(1, 20)
+#Find random number
+Guess = int(input("Welcome! Guess the integer from 1 - 20:"))
+#Ask for guess
+#Find if it's too low or high, ask for re-guess
+while Guess != number:
+    if Guess > number:
+        Guess = int(input("Too high! Guess again:"))
+        num_guess = num_guess + 1
+    if Guess < number:
+        Guess = int(input("Too low! Guess again:"))
+        num_guess = num_guess + 1
+#If correct:
+if Guess == number:
+    print("Correct, you got it in", num_guess, "tries.")
